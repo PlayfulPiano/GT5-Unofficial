@@ -345,11 +345,11 @@ public class GTClient extends GTProxy implements Runnable {
         // draw grid
         GL11.glTranslated(0.0D, -0.502D, 0.0D);
         GL11.glLineWidth(Client.blockoverlay.lineWidth);
-        float red = Client.blockoverlay.red;
-        float green = Client.blockoverlay.green;
-        float blue = Client.blockoverlay.blue;
-        float alpha = Client.blockoverlay.alpha;
-        GL11.glColor4f(red, green, blue, alpha);
+        int red = Client.blockoverlay.red;
+        int green = Client.blockoverlay.green;
+        int blue = Client.blockoverlay.blue;
+        int alpha = Client.blockoverlay.alpha;
+        GL11.glColor4i(red, green, blue, alpha);
         GL11.glBegin(GL11.GL_LINES);
         GL11.glVertex3d(+.50D, .0D, -.25D);
         GL11.glVertex3d(-.50D, .0D, -.25D);
