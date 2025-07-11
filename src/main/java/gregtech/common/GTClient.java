@@ -92,6 +92,7 @@ import gregtech.client.GTMouseEventHandler;
 import gregtech.client.SeekingOggCodec;
 import gregtech.common.blocks.BlockFrameBox;
 import gregtech.common.blocks.ItemMachines;
+import gregtech.common.config.Client;
 import gregtech.common.pollution.Pollution;
 import gregtech.common.pollution.PollutionRenderer;
 import gregtech.common.render.BlackholeRenderer;
@@ -343,8 +344,12 @@ public class GTClient extends GTProxy implements Runnable {
         Rotation.sideRotations[tSideHit].glApply();
         // draw grid
         GL11.glTranslated(0.0D, -0.502D, 0.0D);
-        GL11.glLineWidth(2.5F);
-        GL11.glColor4f(0.0F, 0.0F, 0.0F, 0.5F);
+        GL11.glLineWidth(Client.blockoverlay.lineWidth);
+        float red = Client.blockoverlay.red;
+        float green = Client.blockoverlay.green;
+        float blue = Client.blockoverlay.blue;
+        float alpha = Client.blockoverlay.alpha;
+        GL11.glColor4f(red, green, blue, alpha);
         GL11.glBegin(GL11.GL_LINES);
         GL11.glVertex3d(+.50D, .0D, -.25D);
         GL11.glVertex3d(-.50D, .0D, -.25D);
