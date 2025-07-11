@@ -349,7 +349,7 @@ public class GTClient extends GTProxy implements Runnable {
         int green = Client.blockoverlay.green;
         int blue = Client.blockoverlay.blue;
         int alpha = Client.blockoverlay.alpha;
-        GL11.glColor4i(red, green, blue, alpha);
+        GL11.glColor4ub((byte)red, (byte)green, (byte)blue, (byte)alpha);
         GL11.glBegin(GL11.GL_LINES);
         GL11.glVertex3d(+.50D, .0D, -.25D);
         GL11.glVertex3d(-.50D, .0D, -.25D);
